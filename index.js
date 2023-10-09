@@ -30,7 +30,8 @@ app.use(express.json());
 app.use(
   cors({
     // origin: "http://localhost:3000",
-    origin: "https://social-network-ebon-alpha.vercel.app/",
+    // origin: "https://social-network-ebon-alpha.vercel.app/",
+    origin: "*",
     credentials: true,
   })
 );

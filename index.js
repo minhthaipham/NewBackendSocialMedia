@@ -29,7 +29,8 @@ app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
 app.use(express.json());
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
+    origin: "https://social-network-ebon-alpha.vercel.app/",
     credentials: true,
   })
 );
@@ -60,3 +61,6 @@ mongoose
     app.listen(port, () => console.log(`Server running on port: ${port}`));
   })
   .catch((error) => console.log(error.message));
+
+
+

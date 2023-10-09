@@ -52,7 +52,7 @@ app.use("/video", video);
 
 //   // Handle other socket events as needed
 // });
-
+mongoose.set('strictQuery', false)
 mongoose
   .connect(URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {

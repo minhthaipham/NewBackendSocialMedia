@@ -22,7 +22,7 @@ const io = new Server(httpServer, {
 });
 const port = process.env.PORT || 5000;
 
-const URL = process.env.URL;
+const URL = "mongodb+srv://minhthai:thanhhoainun1@mern.kcqtexp.mongodb.net/?retryWrites=true&w=majority"
 
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));

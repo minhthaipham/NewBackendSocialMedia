@@ -1,7 +1,6 @@
 import Posts from "../model/posts.js";
 import User from "../model/user.js";
 import mongoose from "mongoose";
-import Video from "../model/video.js";
 import Comment from "../model/comment.js";
 export const getPosts = async (req, res) => {
   try {

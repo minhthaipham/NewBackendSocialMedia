@@ -2,6 +2,20 @@ import Comment from "../model/comment.js";
 import Posts from "../model/posts.js";
 import User from "../model/user.js";
 import Reply from "../model/reply.js";
+
+export const getUser = async (req, res) => {
+  try {
+    const user = await User.find({
+      _id: { $ne: req.userId },
+      fullName: { $regex: req.query.fullName, $options: "i" },
+    });
+    res.status(200).json({
+      status: true,
+      data: user,
+    });
+  } catch (error) {}
+};
+
 export const createComment = async (req, res) => {
   try {
     const { idPost, idUser, content } = req.body;

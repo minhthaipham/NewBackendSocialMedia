@@ -6,6 +6,7 @@ import {
   getComment,
   editComment,
   deleteComment,
+  getUser,
 } from "../controller/comment.js";
 import { auth } from "../middleware/authentication.js";
 const router = express.Router();
@@ -16,4 +17,5 @@ router.post("/deleteComment", auth, deleteComment);
 router.post("/createComment", auth, createComment);
 router.post("/likeComment", auth, likeComment);
 router.post("/replyComment", auth, replyComment);
+router.get("/user", getUser);
 export default router;
